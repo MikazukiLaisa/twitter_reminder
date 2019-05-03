@@ -3,7 +3,7 @@ const Twitter = require('twitter')
 const consumer_key = ''
 const consumer_secret = ''
 const access_token_key = ''
-const access_token_secret = ''
+const access_token_secret = ' '
 
 const client = new Twitter({
   consumer_key,
