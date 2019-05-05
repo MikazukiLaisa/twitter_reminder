@@ -45,6 +45,13 @@ var reserve = (tweet_message, user) => {
       console.log("booking : " + df);
       console.log("destination : " + user);
       console.log("booked tweet : " + result[2]);
+
+      var twitter_status2 = user + " " + "reminder setting...  " + result[2];
+      client.post('statuses/update', {status: twitter_status2}, function(error, tweet, response) {
+        if (!error) {
+          console.log("reminder set" + twitter_status);
+        }
+      });
       
       setTimeout(() => {
           var twitter_status = user + " " + result[2];
