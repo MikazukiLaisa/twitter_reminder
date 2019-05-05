@@ -31,6 +31,9 @@ const client = new Twitter({
 
 var reserve = (tweet_message, user) => {
     var result = tweet_message.split(" ");
+    if(result[0] == ""){
+      result.shift();
+    }
     var result_date = result[0].split("/");
     if(!isNaN(result_date[0])){
       var now = Date.now();
